@@ -21,7 +21,7 @@
   align-items: center;
   /* background-color: aqua; */
   height: 8rem;
-  padding: 3.2rem;
+  padding: 4.8rem;
 }
 
 .navigationSection {
@@ -38,6 +38,7 @@
   align-items: center;
   list-style: none;
   text-decoration: none;
+  font-family: "Inter";
 }
 
 .mainNavLink:link,
@@ -45,14 +46,24 @@
   text-decoration: none;
   font-size: 2.4rem;
   color: #333;
-  font-weight: 500;
+  font-weight: 700;
+}
+.mainNavLink:hover {
+  color: #666;
+  transition: all 0.2s ease-in-out;
+}
+
+/* --THEME */
+.themeIcon {
+  cursor: pointer;
 }
 
 /* --PROFILE */
 .profileSection {
   display: flex;
-  column-gap: 2.4rem;
+  column-gap: 2rem;
   align-items: center;
+
   /* border: 3px solid rgba(0, 0, 0, 0.08); */
 }
 
@@ -60,16 +71,39 @@
   text-align: center;
   border-radius: 20%;
 
-  height: 5.2rem;
-  width: 5.2rem;
+  height: 4.4rem;
+  width: 4.4rem;
+  border-radius: 10%;
+
+  /* box-shadow: 1px 1px 1px 2px rgba(3, 3, 3, 0.1); */
+}
+
+.profileInfo {
+  display: grid;
+}
+.profileInfo p {
+  font-size: 1.8rem;
+  /* font-weight: 500; */
+  margin: 0;
+}
+.profileInfo p:last-child {
+  /* font-size: 2rem; */
+  font-weight: 500;
+  /* font-style: italic; */
 }
 
 /* ICONS */
 .icons {
-  height: 5.2rem;
-  width: 5.2rem;
-  font-size: 4em;
+  height: 4rem;
+  width: 4rem;
+  padding: 0.5rem;
+  font-size: 6rem;
   align-items: center;
-  border-radius: 20%;
-  border: 2px solid rgba(0, 0, 0, 0.08);
+  border-radius: 17%;
+  overflow: hidden;
+
+  box-shadow: 0 1px 1rem 3px rgba(3, 3, 3, 0.1);
 }
+/*   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
+  border-radius: 9px;
+  overflow: hidden; */

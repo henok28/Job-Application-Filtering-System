@@ -1,0 +1,89 @@
+/*
+- Font sizes
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+-Spacing Systemms
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+- Grays:
+#767676
+#888
+#555
+#333
+
+*/
+.mainSection {
+  /* padding: 6.4rem; */
+  padding: 4.8rem;
+}
+
+/* Dashboared */
+.dashboared {
+  display: grid;
+
+  gap: 3rem;
+}
+
+.header h1 {
+  font-family: "Inter";
+  font-size: 3rem;
+  font-weight: 500;
+  color: #333;
+  /* margin-left: 1.6rem; */
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 3rem;
+}
+
+.card {
+  display: grid;
+  /* width: 47.2rem;
+  height: 23.6rem; */
+  width: 30.6rem;
+  height: 20rem;
+  padding: 2rem 2.8rem;
+
+  border-radius: 4%;
+  overflow: hidden;
+  box-shadow: 0 1px 1rem 1px rgba(3, 3, 3, 0.09);
+}
+.card p {
+  font-family: "Inter";
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.cardIcon {
+  font-size: 2.6rem;
+
+  /* border: 1px solid rgba(3, 3, 3, 0.4); */
+  border-radius: 10%;
+  padding: 1rem;
+  color: #333;
+  background-color: aliceblue;
+  transition: all 0.2s ease-in;
+}
+.cardIcon:last-child {
+  cursor: pointer;
+}
+.cardIcon:last-child:hover {
+  color: aqua;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: -2rem; */
+}
+
+.cardDescription p {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.cardDescription span {
+  font-weight: 600;
+}

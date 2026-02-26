@@ -57,15 +57,20 @@ function Profile() {
   // const isDark = true;
   const [isDark, setIsDark] = useState(false);
   return (
-    <div onClick={() => setIsDark(!isDark)} className={styles.profileSection}>
-      {isDark ? (
-        <CiLight className={styles.icons} />
-      ) : (
-        <CiDark className={styles.icons} />
-      )}
+    <div className={styles.profileSection}>
+      <div onClick={() => setIsDark(!isDark)} className={styles.themeIcon}>
+        {isDark ? (
+          <CiLight className={styles.icons} />
+        ) : (
+          <CiDark className={styles.icons} />
+        )}
+      </div>
 
-      {/*  */}
       <img className={styles.profile} src={profile} alt="Admins Profile" />
+      <div className={styles.profileInfo}>
+        <p>Anna D</p>
+        <p>Manager</p>
+      </div>
     </div>
   );
 }
