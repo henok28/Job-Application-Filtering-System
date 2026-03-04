@@ -13,77 +13,73 @@
 #333
 
 */
-.mainSection {
-  /* padding: 6.4rem; */
-  padding: 4.8rem;
+
+.container {
+  margin: 1rem 1rem;
+  padding: 1rem 2rem;
+  background-color: #f3f4f4;
+  box-shadow: -2px 2px 15px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
 }
 
-/* Dashboared */
-.dashboared {
-  display: grid;
-
-  gap: 3rem;
+/* DASHBOARED-section */
+.sectionDashboared {
 }
 
-.header h1 {
-  font-family: "Inter";
+h1 {
+  color: #111;
   font-size: 3rem;
   font-weight: 500;
-  color: #333;
-  /* margin-left: 1.6rem; */
 }
 
-/* Cards */
-.cards {
+.dashboaredHeader {
+}
+
+.dataSection {
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
+  align-items: center;
 }
-
 .card {
+  width: 24rem;
+  height: 12rem;
+  padding: 2.4rem 2rem;
+  border-radius: 8px;
+  background-color: #185c3b;
+  /* background-color: #fff; */
+  box-shadow: -2px 2px 15px 5px rgba(255, 255, 255, 0.5);
+  /* font-size: 1.8rem; */
   display: grid;
-  /* width: 47.2rem;
-  height: 23.6rem; */
-  width: 30.6rem;
-  height: 20rem;
-  padding: 2rem 2.8rem;
-
-  border-radius: 4%;
-  overflow: hidden;
-  box-shadow: 0 1px 1rem 1px rgba(3, 3, 3, 0.09);
-}
-.card p {
-  font-family: "Inter";
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.cardIcon {
-  font-size: 2.6rem;
-
-  /* border: 1px solid rgba(3, 3, 3, 0.4); */
-  border-radius: 10%;
-  padding: 1rem;
-  color: #333;
-  background-color: aliceblue;
-  transition: all 0.2s ease-in;
-}
-.cardIcon:last-child {
-  cursor: pointer;
-}
-.cardIcon:last-child:hover {
-  color: aqua;
+  color: white;
 }
 
 .cardHeader {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  /* margin-bottom: -2rem; */
+  margin-top: -2rem;
+  font-size: 1.7rem;
+}
+.cardIcon {
+  width: 3.2rem;
+  height: 3.2rem;
+
+  rotate: calc(-35deg);
+  background-color: white;
+  /* padding: 0.5rem; */
+  border-radius: 50%;
+  color: black;
+  /* font-size: 2rem; */
+  align-self: center;
 }
 
-.cardDescription p {
-  font-size: 2.5rem;
-  font-weight: 600;
+.cardDescription {
+  font-size: 5.2rem;
+  align-self: center;
+  line-height: 1;
 }
-.cardDescription span {
-  font-weight: 600;
+
+.cardInfo {
+  align-self: end;
+  font-size: 1rem;
 }

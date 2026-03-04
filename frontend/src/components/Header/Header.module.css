@@ -14,96 +14,82 @@
 
 */
 
-/* Header */
+/* Header Section Style */
+.container {
+  margin: 1rem 1rem;
+  padding: 1rem 2rem;
+  background-color: #f3f4f4;
+  box-shadow: -2px 2px 15px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: aqua; */
-  height: 8rem;
-  padding: 4.8rem;
 }
-
-.navigationSection {
-  margin-left: -9.8rem;
-}
-
 .logo {
-  height: 8.6rem;
+  /* height: 5rem; */
+  width: 23rem;
+}
+
+.mainNav {
 }
 
 .mainNavList {
   display: flex;
-  gap: 4.8rem;
-  align-items: center;
   list-style: none;
-  text-decoration: none;
-  font-family: "Inter";
+  gap: 5rem;
+  align-items: center;
 }
 
 .mainNavLink:link,
 .mainNavLink:visited {
+  display: inline-block;
   text-decoration: none;
-  font-size: 2.4rem;
-  color: #333;
-  font-weight: 700;
+  color: #111;
+  font-size: 2rem;
+  transition: all 0.3s;
+  font-weight: 600;
 }
 .mainNavLink:hover {
-  color: #666;
-  transition: all 0.2s ease-in-out;
+  color: #333;
 }
 
-/* --THEME */
-.themeIcon {
-  cursor: pointer;
-}
-
-/* --PROFILE */
-.profileSection {
+.icons {
   display: flex;
-  column-gap: 2rem;
+  gap: 1.3rem;
   align-items: center;
+}
+.icon {
+  font-size: 2.3rem;
+  background-color: white;
+  padding: 1.1rem;
+  border-radius: 50%;
+}
 
-  /* border: 3px solid rgba(0, 0, 0, 0.08); */
+.rightHeaderSection {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .profile {
-  text-align: center;
-  border-radius: 20%;
-
-  height: 4.4rem;
-  width: 4.4rem;
-  border-radius: 10%;
-
-  /* box-shadow: 1px 1px 1px 2px rgba(3, 3, 3, 0.1); */
-}
-
-.profileInfo {
-  display: grid;
-}
-.profileInfo p {
-  font-size: 1.8rem;
-  /* font-weight: 500; */
-  margin: 0;
-}
-.profileInfo p:last-child {
-  /* font-size: 2rem; */
-  font-weight: 500;
-  /* font-style: italic; */
-}
-
-/* ICONS */
-.icons {
-  height: 4rem;
-  width: 4rem;
-  padding: 0.5rem;
-  font-size: 6rem;
+  display: flex;
+  gap: 1rem;
   align-items: center;
-  border-radius: 17%;
-  overflow: hidden;
-
-  box-shadow: 0 1px 1rem 3px rgba(3, 3, 3, 0.1);
 }
-/*   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
-  border-radius: 9px;
-  overflow: hidden; */
+.profile span {
+  display: block;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.profile span:first-child {
+  margin-bottom: 0.6rem;
+}
+
+.profileImg {
+  width: 5rem;
+  border-radius: 50%;
+  padding: 0.4rem;
+  background-color: burlywood;
+}

@@ -1,75 +1,60 @@
-import { useState } from "react";
 import styles from "./Header.module.css";
+
 import profile from "./admin.jpg";
 import logo from "./logo.png";
-import { CiDark, CiLight } from "react-icons/ci";
+import clsx from "clsx";
+import { IoMailOutline } from "react-icons/io5";
+import { IoIosNotificationsOutline } from "react-icons/io";
 
 export function Header() {
   return (
-    <div className={styles.header}>
-      <Logo />
-      <Navigtion />
-      <Profile />
-    </div>
-  );
-}
-
-function Logo() {
-  return (
-    <div className="logo">
+    <div className={clsx(styles.header, styles.container)}>
       <a href="#">
-        <img src={logo} alt="Omnifood Logo" class={styles.logo} />
+        <img src={logo} alt="Companies Logo" className={styles.logo} />
       </a>
-    </div>
-  );
-}
 
-function Navigtion() {
-  return (
-    <div className={styles.navigationSection}>
-      <ul className={styles.mainNavList}>
-        <li>
-          <a class={styles.mainNavLink} href="dashboared">
-            Dashboared
-          </a>
-        </li>
-        <li>
-          <a class={styles.mainNavLink} href="#meals">
-            Email
-          </a>
-        </li>
-        <li>
-          <a class={styles.mainNavLink} href="#testimonials">
-            Task
-          </a>
-        </li>
-        <li>
-          <a class={styles.mainNavLink} href="#pricing">
-            Interview
-          </a>
-        </li>
-      </ul>
-    </div>
-  );
-}
+      <nav className={styles.mainNav}>
+        <ul className={styles.mainNavList}>
+          <li>
+            <a className={styles.mainNavLink} href="#">
+              Dashboared
+            </a>
+          </li>
+          <li>
+            <a className={styles.mainNavLink} href="#">
+              Email
+            </a>
+          </li>
+          <li>
+            <a className={styles.mainNavLink} href="#">
+              Task
+            </a>
+          </li>
+          <li>
+            <a className={styles.mainNavLink} href="#">
+              Interview
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div className={styles.rightHeaderSection}>
+        <div className={styles.icons}>
+          <IoMailOutline className={styles.icon} />
+          <IoIosNotificationsOutline className={styles.icon} />
+        </div>
 
-function Profile() {
-  // const isDark = true;
-  const [isDark, setIsDark] = useState(false);
-  return (
-    <div className={styles.profileSection}>
-      <div onClick={() => setIsDark(!isDark)} className={styles.themeIcon}>
-        {isDark ? (
-          <CiLight className={styles.icons} />
-        ) : (
-          <CiDark className={styles.icons} />
-        )}
-      </div>
+        <div className={styles.profile}>
+          <img
+            className={styles.profileImg}
+            src={profile}
+            alt="Admins Profile"
+          />
 
-      <img className={styles.profile} src={profile} alt="Admins Profile" />
-      <div className={styles.profileInfo}>
-        <p>Anna D</p>
-        <p>Manager</p>
+          <div className={styles.profileDescription}>
+            <span>Henok Grima</span>
+            <span>Admin</span>
+          </div>
+        </div>
       </div>
     </div>
   );
