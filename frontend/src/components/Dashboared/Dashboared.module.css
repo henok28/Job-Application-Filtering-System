@@ -26,26 +26,20 @@
 .sectionDashboared {
 }
 
-h1 {
-  color: #111;
-  font-size: 3rem;
-  font-weight: 500;
-}
-
 .dashboaredHeader {
 }
 
 .dataSection {
   display: flex;
   gap: 1rem;
-  align-items: center;
 }
 .card {
   width: 24rem;
-  height: 12rem;
+  height: 10rem;
   padding: 2.4rem 2rem;
   border-radius: 8px;
-  background-color: #185c3b;
+  background-image: linear-gradient(90deg, #185c3b, #467d62);
+
   /* background-color: #fff; */
   box-shadow: -2px 2px 15px 5px rgba(255, 255, 255, 0.5);
   /* font-size: 1.8rem; */
@@ -57,29 +51,131 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: -2rem;
-  font-size: 1.7rem;
+  margin-top: -3rem;
+  font-size: 1.6rem;
 }
-.cardIcon {
-  width: 3.2rem;
-  height: 3.2rem;
+.cardHeader .cardIcon {
+  /* width: 3rem;
+  height: 3rem; */
 
-  rotate: calc(-35deg);
+  rotate: calc(8deg);
   background-color: white;
-  /* padding: 0.5rem; */
+  padding: 0.5rem;
   border-radius: 50%;
   color: black;
-  /* font-size: 2rem; */
-  align-self: center;
+  font-size: 2rem;
 }
 
 .cardDescription {
-  font-size: 5.2rem;
+  font-size: 4.6rem;
   align-self: center;
   line-height: 1;
 }
 
-.cardInfo {
+.carInfo {
   align-self: end;
   font-size: 1rem;
+}
+
+/* -------------------------------------------------------------- */
+/* DASHBOARED TABLE STYLE */
+/* -------------------------------------------------------------- */
+
+.dashboaredTable {
+  margin-top: 2rem;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+}
+.filterRigthTab {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.queryTab input {
+  background-color: white;
+  border: none;
+  width: 20rem;
+  height: 1rem;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow:
+    0 5px 10px hsl(0 0% 0%/0.1),
+    0 -5px 10px hsl(0 0% 0%/0.1);
+}
+
+.sortBy select {
+  background-color: white;
+  border: none;
+  outline: none;
+  width: 20rem;
+  height: 4rem;
+  box-sizing: border-box;
+  padding: 0 2rem;
+  border-radius: 10px;
+  box-shadow:
+    0 5px 10px hsl(0 0% 0%/0.1),
+    0 -5px 10px hsl(0 0% 0%/0.1);
+}
+
+.importBtn {
+  width: 12rem;
+  text-align: center;
+  background-image: linear-gradient(90deg, #467d62, #185c3b);
+
+  color: white;
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.7rem;
+  text-align: center;
+  align-items: center;
+
+  position: relative;
+  transition: all 0.2s;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  background: #ffffff;
+  box-shadow:
+    25px 25px 54px #d9d9d9,
+    -25px -25px 54px #ffffff;
+  margin-top: 2rem;
+  /* padding: 3rem; */
+}
+
+thead {
+  text-align: start;
+
+  box-shadow: 0 5px 10px #888;
+  padding: 1rem 0.5rem;
+}
+
+th {
+  padding: 2rem 3rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: start;
+}
+
+td {
+  padding: 2rem 3rem;
+  font-size: 1.4rem;
+}
+
+tr:nth-child(even) {
+  background-color: #d1ded8;
+  color: black;
 }

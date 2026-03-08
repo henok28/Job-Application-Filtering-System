@@ -1,122 +1,165 @@
 import clsx from "clsx";
 import styles from "./Dashboared.module.css";
-import { IoCheckmarkCircleOutline } from "react-icons/io5";
+import { IoArchiveOutline } from "react-icons/io5";
 import { MdArrowOutward } from "react-icons/md";
-
-import { IoIosArrowRoundForward } from "react-icons/io";
 
 export function Dashboared() {
   return (
     <main>
       <section className={clsx(styles.sectionDashboared, styles.container)}>
-        <div className={styles.dashboaredHeader}>
-          <h1>Dashboared</h1>
-        </div>
-        <div className={styles.dataSection}>
-          <div className={styles.card}>
-            <div className={styles.cardHeader}>
-              <p>Total Applicants</p>
-              <IoIosArrowRoundForward className={styles.cardIcon} />
-            </div>
-            <div className={styles.cardDescription}>
-              <span>200</span>
-            </div>
-            <div className={styles.cardInfo}>
-              <span>Total number of applicants applied</span>
-            </div>
-          </div>
-        </div>
+        <DashboardInfoSection />
+        <DashboardApplicantTable />
       </section>
     </main>
   );
 }
 
-function Header() {
+function DashboardInfoSection() {
   return (
-    <div className={styles.header}>
+    <>
+      <div className={styles.dashboaredInformationTab}>
+        <DashboardHeader />
+        <DashboardDataSection />
+      </div>
+    </>
+  );
+}
+
+function DashboardHeader() {
+  return (
+    <div className={styles.dashboaredHeader}>
       <h1>Dashboared</h1>
     </div>
   );
 }
 
-function Card() {
+function DashboardDataSection() {
   return (
-    <div className={styles.cards}>
-      <div className={styles.card}>
-        <div className={styles.cardHeader}>
-          <IoCheckmarkCircleOutline className={styles.cardIcon} />
-          <MdArrowOutward className={styles.cardIcon} />
-        </div>
-        <p>Total Applications</p>
+    <div className={clsx(styles.dataSection, styles.cards)}>
+      <DashboardCard />
+    </div>
+  );
+}
 
-        <div className={styles.cardDescription}>
-          <p>420</p>
-          <span>Total Applied Applicants </span>
-        </div>
+function DashboardCard() {
+  return (
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
+        <p>Total Applicants</p>
+        <MdArrowOutward className={styles.cardIcon} />
       </div>
-      <div className={styles.card}>
-        <div></div>
+
+      <div className={styles.cardDescription}>
+        <span>200</span>
+      </div>
+
+      <div className={styles.cardInfo}>
+        <span>Total number of applicants applied</span>
       </div>
     </div>
   );
 }
 
-function Table() {
+function DashboardApplicantTable() {
   return (
-    <div class="dashboared-table">
-      <table>
-        <caption>Applicants</caption>
+    <div className={styles.dashboaredTable}>
+      <div className={styles.filters}>
+        <div>
+          <button className={styles.importBtn}>
+            <IoArchiveOutline className={styles.importBtnIcon} />
+            Archive
+          </button>
+        </div>
+        <div className={styles.filterRigthTab}>
+          <div className={styles.queryTab}>
+            <input type="search" placeholder="search" />
+          </div>
 
+          <div className={styles.sortBy}>
+            <select name="sort" id="sortBy">
+              <option value="" disabled selected>
+                SortBy
+              </option>
+              <option value="name">Name</option>
+              <option value="data">Data</option>
+              <option value="start-data">Start-Date</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <table>
         <thead>
           <tr>
-            <td colspan="5">
-              <div class="sortBy">
-                <div class="filter-btns">
-                  <button>⬇️Import To</button>
-                  {/* <button>Starting Date</button>  */}
-                </div>
-
-                <input type="search" placeholder="search" />
-
-                <select name="sort" id="sortBy" aria-placeholder="Hl">
-                  <option value="" disabled selected>
-                    SortBy
-                  </option>
-                  <option value="name">Name</option>
-                  <option value="data">Data</option>
-                  <option value="start-data">Start-Date</option>
-                </select>
-              </div>
-            </td>
+            {/* <!-- <td>&nbsp;</td> --> */}
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Job-Title</th>
+            <th>Experiance</th>
+            <th>Site</th>
+            <th>Type(In-person/Remote)</th>
+            <th>Start-Date</th>
           </tr>
         </thead>
 
-        <tr>
-          {/* <td>&nbsp;</td>  */}
-          <th>Name</th>
-          <th>Email</th>
-          <th>Job-Title</th>
-          <th>Site</th>
-          <th>Start-Date</th>
-        </tr>
+        <tbody>
+          <tr>
+            {/* <!-- <td><input type="checkbox" /></td> --> */}
+            <td data-cell="name">Henok</td>
+            <td data-cell="email">henok@gmail.com</td>
+            <td data-cell="phone">0909090909</td>
+            <td data-cell="job-title">Software Engineer</td>
+            <td data-cell="experiance">0</td>
+            <td data-cell="site">Addis Ababa</td>
+            <td data-cell="type">Remote</td>
+            <td data-cell="start-date">Immediately</td>
+          </tr>
 
-        <tr>
-          {/* <td><input type="checkbox" /></td> */}
-          <td data-cell="name">Henok</td>
-          <td data-cell="email">henok@gmail.com</td>
-          <td data-cell="job-title">Software Engineer</td>
-          <td data-cell="site">Addis Ababa</td>
-          <td data-cell="start-date">Immediately</td>
-        </tr>
-
-        <tr>
-          {/* <td><input type="checkbox" /></td>  */}
-          <td data-cell="name">Henok</td>
-          <td data-cell="email">henok@gmail.com</td>
-          <td data-cell="job-title">Software Engineer</td>
-          <td data-cell="site">Addis Ababa</td>
-          <td data-cell="start-date">Immediately</td>
-        </tr>
+          <tr>
+            {/* <!-- <td><input type="checkbox" /></td> --> */}
+            <td data-cell="name">Henok</td>
+            <td data-cell="email">henok@gmail.com</td>
+            <td data-cell="phone">0909090909</td>
+            <td data-cell="job-title">Software Engineer</td>
+            <td data-cell="experiance">3</td>
+            <td data-cell="site">Addis Ababa</td>
+            <td data-cell="type">In-Person</td>
+            <td data-cell="start-date">Immediately</td>
+          </tr>
+          <tr>
+            {/* <!-- <td><input type="checkbox" /></td> --> */}
+            <td data-cell="name">Henok</td>
+            <td data-cell="email">henok@gmail.com</td>
+            <td data-cell="phone">0909090909</td>
+            <td data-cell="job-title">Software Engineer</td>
+            <td data-cell="experiance">3</td>
+            <td data-cell="site">Addis Ababa</td>
+            <td data-cell="type">In-Person</td>
+            <td data-cell="start-date">Immediately</td>
+          </tr>
+          <tr>
+            {/* <!-- <td><input type="checkbox" /></td> --> */}
+            <td data-cell="name">Henok</td>
+            <td data-cell="email">henok@gmail.com</td>
+            <td data-cell="phone">0909090909</td>
+            <td data-cell="job-title">Software Engineer</td>
+            <td data-cell="experiance">3</td>
+            <td data-cell="site">Addis Ababa</td>
+            <td data-cell="type">In-Person</td>
+            <td data-cell="start-date">Immediately</td>
+          </tr>
+          <tr>
+            {/* <!-- <td><input type="checkbox" /></td> --> */}
+            <td data-cell="name">Henok</td>
+            <td data-cell="email">henok@gmail.com</td>
+            <td data-cell="phone">0909090909</td>
+            <td data-cell="job-title">Software Engineer</td>
+            <td data-cell="experiance">3</td>
+            <td data-cell="site">Addis Ababa</td>
+            <td data-cell="type">In-Person</td>
+            <td data-cell="start-date">Immediately</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   );
